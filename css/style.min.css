@@ -1,9 +1,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: #101111;
     padding-top:54px;
     color:#868e96
 }
-
 @media (min-width:992px){body{padding-top:0;padding-left:17rem}}
 
 h1,h2,h3,h4,h5,h6{
@@ -12,9 +12,7 @@ h1,h2,h3,h4,h5,h6{
     text-transform:uppercase;
     color:#343a40
 }
-
 h1{font-size:6rem;line-height:5.5rem}
-
 h2{font-size:3.5rem}
 
 .subheading{
@@ -35,7 +33,6 @@ h2{font-size:3.5rem}
     text-transform:uppercase;
 }
 @media (min-width:992px){#sideNav{text-align:center;position:fixed;top:0;left:0;display:flex;flex-direction:column;width:17rem;height:100vh}
-
 #sideNav .navbar-brand{display:flex;margin:auto auto 0;padding:.5rem}
 #sideNav .navbar-brand .img-profile{max-width:10rem;max-height:10rem;border:.5rem solid rgba(255,255,255,.2)}
 #sideNav .navbar-collapse{display:flex;align-items:flex-start;flex-grow:0;width:100%;margin-bottom:auto}
@@ -52,9 +49,6 @@ section.resume-section .resume-item .resume-date{min-width:none}
 section.resume-section .resume-item .resume-date{min-width:18rem}}
 @media (min-width:992px){section.resume-section{padding-top:3rem!important;padding-bottom:3rem!important}}
 
-.bg-primary{background-color:#464545!important}
-
-.text-primary{color:#bd5d38!important}
 
 a{color:#bd5d38}
 

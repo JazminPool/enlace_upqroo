@@ -1,0 +1,41 @@
+.cuerpo{ /*Cuerpo principal del contenido*/
+    background-color: aliceblue; /*f6f7f8*/
+}
+
+.bg-primary{background-color:#464545!important} /*ed8b43, 154677  */
+
+.tabla{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 10px;
+    font-size: 93%;
+    font-weight: normal;
+    text-align: center;
+}
+.fuente_monse{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.fuente_especial{
+    color: #6f6ff9;
+}
+.vertical_centro{
+    vertical-align: middle;
+    text-align: center;
+}
+#tablas{
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.cabecera_table{
+    height: 1px;
+}
+.bordes-boton{
+    border-radius: 10em;
+}
+.col-centrada{
+    float: none;
+    margin: 0 auto;
+}
