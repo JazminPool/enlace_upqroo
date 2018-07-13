@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Enlace xdxd</title>
+    <title>Enlace upqroo</title>
 
     <?php include('links.php');?>
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" class="body-nav">
     <?php include('nav.php');?>
 
     <div class="cuerpo">
@@ -45,7 +45,7 @@
                 </tbody>
               </table>
       </section>
-    </div>
+    </div><!--Fin de cuerpo-->
 
     <!--Inicia modal-->
     <div class="modal fade" id="modal_detalles_afiliados" tabindex="-1" role="dialog" aria-labelledby="modal_detalles_afiliadosLabel" aria-hidden="true">

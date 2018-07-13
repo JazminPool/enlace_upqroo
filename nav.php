@@ -1,7 +1,7 @@
 <!--Nav-SideBar responsive-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Enlace xdxd</span>
+        <span class="d-block d-lg-none">Enlace</span>
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/lorena.png" alt="">
         </span>
@@ -15,7 +15,11 @@
         <!--js-scroll-trigger es una clase que esta bien chida xdxd-->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#aliados">Aliados</a>
+            <h6 class="fuente_monse lorena">Lorena Herrera Arre</h6>
+            <!--<label class="fuente_monse">Nombre de la Lorena</label>-->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aliados.php">Aliados</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#peticiones">Peticiones</a>
