@@ -35,23 +35,30 @@
 
     <div class="cuerpo">
         <section class="resume-section p-5" id="aliados">
-            <div class="row ">   
-                <div class="col-lg-10"> 
-                    <h3>c:</h3> <br>
-                    <form role="form">
-                        <div class="form-group">
-                            <input type="name" class="form-control" id="NameInputEmail1" placeholder="Nombre de usuario">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="NameInputEmail1" placeholder="Contraseña">
-                        </div>
-                        <form  action="" method="">
-                            <button type="submit" class="btn btn-primary">Iniciar </button>
-                        </form>
-                    </form>    
-                </div>
-            </div>
+        <!--SOLUCIOARÉ ESTO DESPUES!!!!!-->
+            <div class="justify-content-md-center"><br><br><br>
+                <div class="row ">   
+                    <div class="col-lg-10 mx-auto"> 
+                        <center>
+                            <div class="card bg-light mb-3"> <!--Se lo wa quitar-->
+                                <div class="card-body">
+                                    <form role="form" action="" method=""> <!--Corregir las etiquetas-->
+                                        <div class="form-group">
+                                        <small class="text-muted fuente_monse fuente_uppercase">Usuario</small>
+                                            <input type="text" class="form-control border-secondary fuente_monse text-center" id="" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <small class="text-muted fuente_monse fuente_uppercase">Contraseña</small>
+                                            <input type="password" class="form-control border-secondary fuente_monse text-center" id="" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary fuente_monse ">Ingresar</button><!--Es de tipo submit-->
+                                    </form>    
+                                </div><!--Fin del card body-->
+                            </div><!--Fin del card-->
+                        </center>
+                    </div><!--Fin del col-lg-->
+                </div> <!--Fin del row-->
+            </div><!--Fin del container-->
       </section>
     </div><!--Fin de cuerpo-->
 

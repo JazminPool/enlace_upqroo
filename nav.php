@@ -3,7 +3,7 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Enlace</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/lorena.png" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/lorena.png">
         </span>
       </a>
       <!--Boton cuando es responsive-->
@@ -22,15 +22,15 @@
             <a class="nav-link" href="aliados.php">Aliados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#peticiones">Peticiones</a>
+            <a class="nav-link" href="peticiones.php">Peticiones</a>
           </li>
           <li class="nav-item">
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#convocatoria">Convocatoria</a>
+            <a class="nav-link" href="convocatorias.php">Convocatoria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#historial">Historial</a>
+            <a class="nav-link" href="correos.php">Correos masivos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#historial">Cerrar sesión</a>

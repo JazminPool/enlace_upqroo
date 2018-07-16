@@ -1,0 +1,96 @@
+.bordes-boton{
+    border-radius: 4px;
+}
+
+/*Botones de aliados*/
+    .btn-aliados{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 85%;
+        border-color: rgb(255, 155, 25);
+        background-color: rgba(255, 155, 25, 0);
+        color: orange;
+    }
+    .btn-aliados:hover{
+        transition: all 0.5s;
+        background-color: rgb(211, 112, 0);
+        border-color: rgb(255, 156, 25);
+        color: white;
+    }
+
+/*Botones de las peticiones*/
+    /*APROBAR PETICION*/
+        .btn-aprobar{ 
+            background-color: rgba(126, 219, 32, 0); 
+            border-color: rgb(103, 139, 29); 
+            font-size:25%; color: rgb(126, 219, 32); 
+            
+        }  
+        .btn-aprobar:hover{ 
+            background-color: rgb(76, 145, 7); 
+            border-radius: 2em; 
+            border-color: rgb(103, 139, 29);
+            color: white;
+        }
+        .boton-done {
+            text-align: center;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .boton-done i {
+            vertical-align: middle;
+            position: relative;
+            transition: 0.5s;
+        }  
+        .boton-done i::after {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 70%;
+            content: 'aprobar';
+            color: black;
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0px;
+            transition: 0.5s;
+        }
+        .boton-done:hover i { padding-right: 80px; }
+        .boton-done:hover i::after { opacity: 1; left: 30%; }
+    
+    /*RECHAZAR PETICION*/
+        .btn-rechazar{ 
+            background-color: rgba(126, 219, 32, 0); 
+            border-color: rgb(167, 1, 1); 
+            font-size:25%; color: rgb(219, 32, 32); 
+            
+        }  
+        .btn-rechazar:hover{ 
+            background-color: rgb(219, 32, 32); 
+            border-radius: 2em; 
+            border-color: rgb(167, 1, 1);
+            color: white;
+        }
+        .boton-rechazar {
+            text-align: center;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .boton-rechazar i {
+            vertical-align: middle;
+            position: relative;
+            transition: 0.5s;
+        }  
+        .boton-rechazar i::after {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 70%;
+            content: 'rechazar';
+            color: black;
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0px;
+            transition: 0.5s;
+        }
+        .boton-rechazar:hover i { padding-right: 80px; }
+        .boton-rechazar:hover i::after { opacity: 1; left: 30%; }
+/***********************************************************/

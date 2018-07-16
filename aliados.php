@@ -21,10 +21,10 @@
             <table class="tabla table table-responsive-md table-bordered align-center font-weight-light">
                 <thead id="tablas"><!--inicio de cabecera que contiene columnas-->
                   <tr class="cabecera_table">
-                    <td scope="col" class="col-md-3 align-middle"># Convenio</td> <!--Columna-->
+                    <td scope="col" class="col-md-2 align-middle"># Convenio</td> <!--Columna-->
                     <td scope="col" class="col-md-5 align-middle">Nombre de la empresa</td> <!--Columna-->
                     <td scope="col" class="col-md-2 align-middle">Página Oficial</td> <!--Columna-->
-                    <td scope="col" class="col-md-2 align-middle">Detalles</td> <!--Columna-->
+                    <td scope="col" class="col-md-3 align-middle">Detalles de aliado</td> <!--Columna-->
                   </tr>
                 </thead>
                 <tbody>
@@ -32,12 +32,12 @@
                     <td scope="row" class="align-middle">1</td> <!--Fila-->
                     <td class="align-middle">Ejemplo de nombre</td> <!--Fila-->
                     <td class="align-middle">
-                      <button type="button" class="btn btn-danger bordes-boton btn-sm my-0 waves-effect waves-light">
-                        Ir
+                      <button type="button" class="btn btn-aliados bordes-boton btn-sm my-0 waves-effect waves-light">
+                        Visitar
                       </button>
                     </td> <!--Fila-->
                     <td class="align-middle">
-                      <button type="button" data-toggle="modal" data-target="#modal_detalles_afiliados" class="btn btn-danger bordes-boton btn-sm my-0 waves-effect waves-light">
+                      <button type="button" data-toggle="modal" data-target="#modal_detalles_afiliados" class="btn btn-aliados bordes-boton btn-sm my-0 waves-effect waves-light">
                         Ver detalles
                       </button>
                     </td> <!--Fila-->

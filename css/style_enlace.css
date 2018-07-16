@@ -1,86 +1,93 @@
-/***************************************************************************************/    
-    /*Propiedades del lado izquierdo de login*/
-        #izquierda-index .navbar-nav .nav-item .nav-link{
-            font-weight:400;
-            text-transform:uppercase;
-        }
-        @media (min-width:992px){
-            #izquierda-index{
-                text-align:center;
-                position:fixed;
-                top:0; left:0; display:flex; flex-direction:column;
-                width:42rem; /*Empieza el nav*/
-                height:100vh
-            }
-            #izquierda-index .navbar-brand{display:flex;margin:auto auto 0;padding:.5rem}
-            #izquierda-index .navbar-brand .img-profile{
-                max-width:10rem;max-height:10rem;border:.5rem solid rgba(255,255,255,.2)}
-            #izquierda-index .navbar-collapse{
-                display:flex;align-items:flex-start;flex-grow:0;width:100%;margin-bottom:auto}
-            #izquierda-index .navbar-collapse .navbar-nav{flex-direction:column;width:100%}
-            #izquierda-index .navbar-collapse .navbar-nav .nav-item{display:block}
-            #izquierda-index .navbar-collapse .navbar-nav .nav-item .nav-link{display:block}
-        }
-    /***Propiedades lado derecho del login******/
-        .body-index{
-            padding-top:54px;
-        }
-        @media (min-width:992px){
-            .body-index{
-                padding-top:0;
-                padding-left:42rem /*Empieza cuerpo*/
-            }
-        }
-/*******************************************************************************************/
 
-
-
+/*Propiedades del lado izquierdo de login*/
+    #izquierda-index .navbar-nav .nav-item .nav-link{
+        font-weight:400;
+        text-transform:uppercase;
+    }
+    @media (min-width:992px){
+        #izquierda-index{
+            text-align:center;
+            position:fixed;
+            top:0; left:0; display:flex; flex-direction:column;
+            width:42rem; /*Empieza el nav*/
+            height:100vh
+        }
+        #izquierda-index .navbar-brand{display:flex;margin:auto auto 0;padding:.5rem}
+        #izquierda-index .navbar-brand .img-profile{
+            max-width:10rem;max-height:10rem;border:.5rem solid rgba(255,255,255,.2)}
+        #izquierda-index .navbar-collapse{
+            display:flex;align-items:flex-start;flex-grow:0;width:100%;margin-bottom:auto}
+        #izquierda-index .navbar-collapse .navbar-nav{flex-direction:column;width:100%}
+        #izquierda-index .navbar-collapse .navbar-nav .nav-item{display:block}
+        #izquierda-index .navbar-collapse .navbar-nav .nav-item .nav-link{display:block}
+    }
+/***Propiedades lado derecho del login******/
+    .body-index{
+        padding-top:54px;
+    }
+    @media (min-width:992px){
+    .body-index{
+        padding-top:0;
+        padding-left:42rem /*Empieza cuerpo*/
+    }
+    }
 /*cuerpo principal lado derecho del nav*/
-.cuerpo{  background-color: #f6f7f8; /*f6f7f8*/ }
+    .cuerpo{  background-color: #f6f7f8; /*f6f7f8*/ }
+
 
 /*Color del nav*/
 .bg-primary{background-color:#464545!important} /*#ed8b43, #154677  */
 
-.tabla{
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    vertical-align: middle;
-        border-radius: 10px;
+/*Propiedades de las tablas*/
+    .tabla{
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        vertical-align: middle;
         font-size: 93%;
-    font-weight: normal;
-    text-align: center;
-}
-.fuente_monse{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-}
-.fuente_especial{
-    color: #6f6ff9;
-}
-.lorena{  color: rgb(184, 199, 194); }
+        font-weight: normal;
+        text-align: center;
+    }
+    .table-bordered td, .table-bordered th{
+        border-top-color: rgb(30, 83, 83);
+        border-right-color: rgb(30, 83, 83);;
+        border-left-color: rgb(30, 83, 83);;
+        border-bottom-color: rgb(30, 83, 83);;
+    }
+    #tablas{
+        vertical-align: middle;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    .cabecera_table{
+        height: 1px;
+    }
+    .col-centrada{
+        float: none;
+        margin: 0 auto;
+    }
+    
 
-.link-nav{ color: azure; }
-.link-nav:hover{ color: #464545; }
+/*Propiedades de las fuentes*/
+    .fuente_monse{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+    }
+    .fuente_uppercase{ text-transform: uppercase; }
+    
+    .fuente_especial{ color: #6f6ff9; }
+    
+    .lorena{  color: rgb(184, 199, 194); }
+    
+    .link-nav{ color: azure; }
+    
+    .link-nav:hover{ color: #464545; }
+    
+    .vertical_centro{
+        vertical-align: middle;
+        text-align: center;
+    }
 
-.vertical_centro{
-    vertical-align: middle;
-    text-align: center;
-}
-#tablas{
-    vertical-align: middle;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-.cabecera_table{
-    height: 1px;
-}
-.bordes-boton{
-    border-radius: 10em;
-}
-.col-centrada{
-    float: none;
-    margin: 0 auto;
-}
+
 
 
 
