@@ -25,22 +25,15 @@
                     <td scope="col" class="col-md-5 align-middle">Nombre de la empresa</td> <!--Columna-->
                     <td scope="col" class="col-md-2 align-middle">Página Oficial</td> <!--Columna-->
                     <td scope="col" class="col-md-3 align-middle">Detalles de aliado</td> <!--Columna-->
+                    <td scope="col" class="col-md-3 align-middle">Acciones</td> <!--Columna-->
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td scope="row" class="align-middle">1</td> <!--Fila-->
-                    <td class="align-middle">Ejemplo de nombre</td> <!--Fila-->
-                    <td class="align-middle">
-                      <button type="button" class="btn btn-aliados bordes-boton btn-sm my-0 waves-effect waves-light">
-                        Visitar
-                      </button>
-                    </td> <!--Fila-->
-                    <td class="align-middle">
-                      <button type="button" data-toggle="modal" data-target="#modal_detalles_afiliados" class="btn btn-aliados bordes-boton btn-sm my-0 waves-effect waves-light">
-                        Ver detalles
-                      </button>
-                    </td> <!--Fila-->
+                   <?PHP
+		               include("conexion_datos.php");
+			             Conexion_datos::aliados_funcion();
+	                	?>   
                   </tr>
                 </tbody>
               </table>
@@ -48,38 +41,8 @@
     </div><!--Fin de cuerpo-->
 
     <!--Inicia modal-->
-    <div class="modal fade" id="modal_detalles_afiliados" tabindex="-1" role="dialog" aria-labelledby="modal_detalles_afiliadosLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nombre de la empresa</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div><!--Finaliza modal-header-->
-          <div class="row justify-content-md-center">   
-            <div class="col-lg-8">    
-              <div class="modal-body">
-                <div class="card vertical_centro" style="width: 18rem;">
-                  <img class="card-img-top" src="img/lorena.png" alt="Logotipo de empresa"> <!--Aquí debe ir el logo-->
-                  <div class="card-body fuente_monse fuente_especial">
-                    <p class="card-text">
-                      Telefono: 998 745 87 41
-                    </p>
-                    <p class="card-text">
-                      Contacto: abdes@gmail.com
-                    </p>
-                  </div>
-                </div>
-              </div><!--Finaliza modal-loby-->
-            </div><!--Finaliza col-md-6-->
-          </div> <!--Finaliza row-->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div> <!--Finaliza modal-->
+
+     <!--Finaliza modal-->
 
 
     <!-- Bootstrap JavaScript -->
