@@ -17,15 +17,25 @@
 
     <div class="cuerpo">
       <section class="resume-section p-5" id="aliados">
-        <h3>Aliados estratégicos</h3> <br>
-            <table class="tabla table table-responsive-md table-bordered align-center font-weight-light">
-                <thead id="tablas"><!--inicio de cabecera que contiene columnas-->
+        <div class="row">
+          <div class="col">
+            <h3>Aliados estratégicos</h3> 
+          </div><!--fin col-->
+          <div class="col">
+            <button type='button' data-toggle='modal' data-target='#agrega_aliado'class='btn btn-add-aliado waves-light'>
+              Agregar
+            </button>
+          </div><!--fin col-->
+        </div><!--fin row-->
+        <br>
+            <table border="10" class="tabla table table-responsive-md table-bordered align-center font-weight-light">
+                <thead id="tablas" class="table-aliados"><!--inicio de cabecera que contiene columnas-->
                   <tr class="cabecera_table">
                     <td scope="col" class="col-md-2 align-middle"># Convenio</td> <!--Columna-->
-                    <td scope="col" class="col-md-5 align-middle">Nombre de la empresa</td> <!--Columna-->
+                    <td scope="col" class="col-md-3 align-middle">Nombre de la empresa</td> <!--Columna-->
                     <td scope="col" class="col-md-2 align-middle">Página Oficial</td> <!--Columna-->
-                    <td scope="col" class="col-md-3 align-middle">Detalles de aliado</td> <!--Columna-->
-                    <td scope="col" class="col-md-3 align-middle">Acciones</td> <!--Columna-->
+                    <td scope="col" class="col-md-2 align-middle">Detalles de aliado</td> <!--Columna-->
+                    <td scope="col" class="col-md-2 align-middle">Acciones</td> <!--Columna-->
                   </tr>
                 </thead>
                 <tbody>
@@ -40,9 +50,169 @@
       </section>
     </div><!--Fin de cuerpo-->
 
-    <!--Inicia modal-->
+  <!--Inicia modal editar aliado-->
+  <div class="modal fade" id="edita_aliado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-header-color-edit">
+          <h5 class="modal-title modal-title-edit" id="">Editar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div><!--Fin header-->
+        <div class="modal-body">
+          <div class="row col-centrada">
+            <div class="col">
+              <label>Numero de convenio</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <div class="row col-centrada">
+            <div class="col">
+              <label>Nombre de la empresa</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <div class="row col-centrada">
+            <div class="col">
+              <label>URL del Sitio Oficial</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <div class="row col-centrada">
+            <div class="col">
+              <label>Telefono de la empresa</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <div class="row col-centrada">
+            <div class="col">
+              <label>Correo de la empresa</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <center>
+            <div class="row col-centrada">
+              <div class="col">
+                <label>Seleccionar logotipo</label>
+              </div>
+            </div><!--Fin del row-->
+            <div class="row col-centrada">  
+              <div class="col">
+                <div class="form-group">
+                  <input type="file" class="form-control-file" id="">
+                </div>
+              </div>
+            </div><!--Fin del row-->
+            <button type="button" class="fuente-monse btn btn-info align-derecha">Guardar</button>
+          </center>
+        </div><!--Fin del modal-body-->
+      </div>
+    </div>
+  </div><!--Finaliza modal de editar aliado-->
 
-     <!--Finaliza modal-->
+
+  <!--Inicia modal Agregar nuevo aliado-->
+  <div class="modal fade" id="agrega_aliado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-header-color-add">
+          <h5 class="modal-title modal-title-edit" id="">Editar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div><!--Fin header-->
+        <div class="modal-body">
+          <div class="row col-centrada">
+            <div class="col">
+              <label>Numero de convenio</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <div class="row col-centrada">
+            <div class="col">
+              <label>Nombre de la empresa</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <div class="row col-centrada">
+            <div class="col">
+              <label>URL del Sitio Oficial</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <div class="row col-centrada">
+            <div class="col">
+              <label>Telefono de la empresa</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <div class="row col-centrada">
+            <div class="col">
+              <label>Correo de la empresa</label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control fuente_monse">
+            </div>
+          </div><!--Fin del row-->
+          <br>
+          <center>
+            <div class="row col-centrada">
+              <div class="col">
+                <label>Seleccionar logotipo</label>
+              </div>
+            </div><!--Fin del row-->
+            <div class="row col-centrada">  
+              <div class="col">
+                <div class="form-group">
+                  <input type="file" class="form-control-file" id="">
+                </div>
+              </div>
+            </div><!--Fin del row-->
+            <button type="button" class="fuente-monse btn btn-add-aliado">Guardar</button>
+          </center>
+        </div><!--Fin del modal-body-->
+      </div>
+    </div>
+  </div><!--Finaliza modal-->
+  
+  <!--Inicia modal 'alert' de eliminar  -->
+  <div class="modal fade bd-example-modal-sm" id="delete_aliado" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        ¿Seguro que desea eliminar aliado?, esta acción no puede revertirse.
+        <button type="button" class="fuente-monse btn btn-info align-derecha">Borrar</button>
+      </div>
+    </div>
+  </div>
+     
 
 
     <!-- Bootstrap JavaScript -->

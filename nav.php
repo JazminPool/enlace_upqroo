@@ -19,21 +19,21 @@
             <!--<label class="fuente_monse">Nombre de la Lorena</label>-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aliados.php">Aliados</a>
+            <a class="nav-link link-font" href="aliados.php">Aliados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="peticiones.php">Peticiones</a>
+            <a class="nav-link link-font" href="peticiones.php">Peticiones</a>
           </li>
           <li class="nav-item">
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="convocatorias.php">Convocatoria</a>
+            <a class="nav-link link-font" href="convocatorias.php">Convocatoria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="correos.php">Correos masivos</a>
+            <a class="nav-link link-font" href="correos.php">Correos masivos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#historial">Cerrar sesión</a>
+            <a class="nav-link link-font" href="#historial">Cerrar sesión</a>
           </li>
         </ul>
       </div>

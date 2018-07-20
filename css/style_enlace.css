@@ -36,9 +36,13 @@
 
 
 /*Color del nav*/
-.bg-primary{background-color:#464545!important} /*#ed8b43, #154677  */
+.bg-primary{background-color:#9b423c!important} /*#ed8b43, #154677  */
 
 /*Propiedades de las tablas*/
+    .table-aliados{
+        background-color: rgb(196, 196, 196);
+    }
+
     .tabla{
         font-family: 'Montserrat', sans-serif;
         width: 100%;
@@ -48,11 +52,16 @@
         text-align: center;
     }
     .table-bordered td, .table-bordered th{
-        border-top-color: rgb(30, 83, 83);
-        border-right-color: rgb(30, 83, 83);;
-        border-left-color: rgb(30, 83, 83);;
-        border-bottom-color: rgb(30, 83, 83);;
+        border-color: black !important;
     }
+/*
+    .table-bordere td, .table-bordere th{
+        border-color: black;
+        border-top-color: rgb(0, 0, 0);
+        border-right-color: rgb(0, 0, 0);
+        border-left-color: rgb(0, 0, 0);
+        border-bottom-color: rgb(0, 0, 0);
+    }*/
     #tablas{
         vertical-align: middle;
         text-transform: uppercase;
@@ -66,6 +75,18 @@
         margin: 0 auto;
     }
     
+/*Propiedades de modal*/    
+    .modal-header-color-edit{
+        background-color: #17a2b8;
+    }
+    .modal-header-color-add{
+        background-color: rgb(99, 197, 6);
+    }
+    .modal-title-edit{
+        color: #f6f7f8;
+    }
+
+
 
 /*Propiedades de las fuentes*/
     .fuente_monse{
@@ -76,9 +97,14 @@
     
     .fuente_especial{ color: #6f6ff9; }
     
-    .lorena{  color: rgb(184, 199, 194); }
-    
-    .link-nav{ color: azure; }
+    .lorena{  color: rgb(27, 27, 27); }
+
+    .link-font{
+        color: rgb(255, 255, 255) !important;
+    }
+    .link-font:hover{
+        color: yellowgreen !important;
+    }
     
     .link-nav:hover{ color: #464545; }
     

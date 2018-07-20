@@ -23,18 +23,28 @@
                   <tr class="cabecera_table">
                     <td scope="col" class="col-md-2 align-middle">Tipo</td> <!--Columna-->
                     <td scope="col" class="col-md-3 align-middle">Fechas</td> <!--Columna-->
-                    <td scope="col" class="col-md-2 align-middle">Carreras</td> <!--Columna-->
-                    <td scope="col" class="col-md-2 align-middle">boton ok</td> <!--Columna-->
-                    <td scope="col" class="col-md-3 align-middle">Documento</td> <!--Columna-->
+                    <td scope="col" class="col-md-3 align-middle">Carreras</td> <!--Columna-->
+                    <td scope="col" class="col-md-2 align-middle">Documento</td> <!--Columna-->
+                    <td scope="col" class="col-md-2 align-middle">Action</td> <!--Columna-->
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td scope="row" class="align-middle">Estancias</td> <!--Fila-->
-                    <td class="align-middle">12/12/12</td> <!--Fila-->
-                    <td class="align-middle">Ing. Software</td> <!--Fila-->
-                    <td class="align-middle">ok</td> <!--Fila-->
-                    <td class="align-middle">Documento a</td> <!--Fila-->
+                    <td class="align-middle">
+                      12/12/12 <!--http://gijgo.com/datepicker/example/bootstrap-4-->
+                    </td> <!--Fila-->
+                    <td class="align-middle">
+                      <select id="" class="form-control-sm form-control">
+                        <option>Ing. Software</option>
+                      </select>
+                    </td> <!--Fila-->
+                    <td class="align-middle">Documento</td> <!--Fila-->
+                    <td class="align-middle">
+                      <button type="button" class="btn btn-secondary boton-done btn-sm my-0 waves-effect waves-light">
+                        Ok
+                      </button>
+                    </td> <!--Fila-->
                     </td> <!--Fila-->
                   </tr>
                 </tbody>

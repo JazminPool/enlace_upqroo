@@ -27,16 +27,16 @@ class Conexion_datos
         </td> <!--Fila-->
         <td class='align-middle'>
           <button type='button' data-toggle='modal' data-target='#".$colum_aliado['idaliados_estrategicos']."'
-           class='btn btn-aliados bordes-boton btn-sm my-0 waves-effect waves-light'>
+           class='btn btn-aliados-detalles bordes-boton btn-sm my-0 waves-effect waves-light'>
             Ver detalles
           </button> 
         </td> <!--Fila-->
         <td class='align-middle'>
-          <button type='button' ".$colum_aliado['idaliados_estrategicos']."'
-          class='btn btn-success bordes-boton btn-sm my-0 waves-effect waves-light'>
+          <button type='button' data-toggle='modal' data-target='#edita_aliado'
+            class='btn btn-info bordes-boton btn-sm my-0 waves-effect waves-light'>
             Editar
           </button> 
-          <button type='button' ".$colum_aliado['idaliados_estrategicos']."'
+          <button type='button' ".$colum_aliado['idaliados_estrategicos']."' data-toggle='modal' data-target='#delete_aliado'
           class='btn btn-danger bordes-boton btn-sm my-0 waves-effect waves-light'>
             Elminar
           </button> 
@@ -67,7 +67,8 @@ public static function llama_detalles($id_aliado)
   
 }
 
-//Funcion para llamar el modal
+
+//Funcion para llamar el modal de ver detalles
 public static function Switch($id_aliado,$id_nombre,$contac_empresa,$correo_empresa)
 {  echo "
   <div class='modal fade' id='".$id_aliado."' tabindex='-1' role='dialog' aria-labelledby='modal_detalles_afiliadosLabel' aria-hidden='true'>

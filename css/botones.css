@@ -2,19 +2,50 @@
     border-radius: 4px;
 }
 
+/*Alinear boton a la derecha*/
+.align-derecha{
+    float: right;
+}
+
+/*Botones modal edit*/  
+    .btn-guardar{
+        background-color: rgb(89, 175, 19);
+        color: white;
+    }
+    .btn-guardar:hover{
+        background-color: rgb(73, 163, 0);
+        border-color: rgb(89, 175, 19);
+}
+
 /*Botones de aliados*/
+    .btn-add-aliado{
+        background-color: rgb(99, 197, 6);
+        float: right;
+        color: rgb(255, 255, 255);
+    }
+    .btn-add-aliado:hover{
+        background-color: rgb(83, 160, 10);
+        border-color: rgb(99, 197, 6);
+    }
     .btn-aliados{
         font-family: 'Montserrat', sans-serif;
         font-size: 85%;
-        border-color: rgb(255, 155, 25);
-        background-color: rgba(255, 155, 25, 0);
-        color: orange;
+        border-color: rgb(234, 173, 60);
+        background-color: rgb(234, 173, 60);
+        color: rgb(255, 255, 255);
     }
     .btn-aliados:hover{
         transition: all 0.5s;
-        background-color: rgb(211, 112, 0);
+        background-color: rgb(236, 139, 27);
         border-color: rgb(255, 156, 25);
         color: white;
+    }
+    .btn-aliados-detalles{
+        background-color: rgb(82, 89, 85);
+        color: white;
+    }
+    .btn-aliados-detalles:hover{
+        background-color: rgb(56, 59, 58);
     }
 
 /*Botones de las peticiones*/
