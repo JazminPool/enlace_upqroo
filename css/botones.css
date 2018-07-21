@@ -1,3 +1,4 @@
+/*Bordes redondeados*/
 .bordes-boton{
     border-radius: 4px;
 }
@@ -6,6 +7,15 @@
 .align-derecha{
     float: right;
 }
+
+/*Boton enviar de CORREOS MASIVOS*/
+    .btn-enviar{
+        background-color: yellowgreen;
+        float: right;
+    }
+    .btn-enviar:hover{
+        background-color: rgb(108, 199, 17);
+    }
 
 /*Botones modal edit*/  
     .btn-guardar{
@@ -49,6 +59,43 @@
     }
 
 /*Botones de las peticiones*/
+    /*VER*/
+        .btn-aver{ 
+            background-color: rgba(126, 219, 32, 0); 
+            border-color: rgb(0, 153, 173); 
+            font-size:25%; color: rgb(0, 153, 173); 
+            
+        }  
+        .btn-aver:hover{ 
+            background-color: rgb(0, 153, 173);  
+            border-radius: 2em; 
+            border-color: rgb(0, 153, 173); 
+            color: white;
+        }
+        .boton-aver {
+            text-align: center;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .boton-aver i {
+            vertical-align: middle;
+            position: relative;
+            transition: 0.5s;
+        }  
+        .boton-aver i::after {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 70%;
+            content: 'ver';
+            color: black;
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0px;
+            transition: 0.5s;
+        }
+        .boton-aver:hover i { padding-right: 50px; }
+        .boton-aver:hover i::after { opacity: 1; left: 45%; }
     /*APROBAR PETICION*/
         .btn-aprobar{ 
             background-color: rgba(126, 219, 32, 0); 

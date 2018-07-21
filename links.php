@@ -16,4 +16,5 @@
 <link href="css/style.min.css" rel="stylesheet">
 <link href="css/style_enlace.css" rel="stylesheet">
 <link href="css/botones.css" rel="stylesheet">
+<link href="css/tablas.css" rel="stylesheet">
 

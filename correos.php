@@ -24,12 +24,17 @@
             <input type="email" class="form-control" id="exampleFormControlInput1">
           </div>
           <div class="form-group">
-          <small>Destinatarios</small>
+            <small>Destinatarios</small>
             <input type="email" class="form-control" id="exampleFormControlInput1">
           </div>
           <div class="form-group">
-          <small>Mensaje</small>
+            <small>Mensaje</small>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+          </div>
+          <div class="form-group">
+            <button type='button' class='btn btn-enviar waves-light'>
+              Enviar
+            </button>
           </div>
         </form><!--Fin de form-->
       </section>

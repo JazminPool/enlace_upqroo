@@ -28,25 +28,25 @@
           </div><!--fin col-->
         </div><!--fin row-->
         <br>
-            <table border="10" class="tabla table table-responsive-md table-bordered align-center font-weight-light">
-                <thead id="tablas" class="table-aliados"><!--inicio de cabecera que contiene columnas-->
-                  <tr class="cabecera_table">
-                    <td scope="col" class="col-md-2 align-middle"># Convenio</td> <!--Columna-->
-                    <td scope="col" class="col-md-3 align-middle">Nombre de la empresa</td> <!--Columna-->
-                    <td scope="col" class="col-md-2 align-middle">Página Oficial</td> <!--Columna-->
-                    <td scope="col" class="col-md-2 align-middle">Detalles de aliado</td> <!--Columna-->
-                    <td scope="col" class="col-md-2 align-middle">Acciones</td> <!--Columna-->
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                   <?PHP
-		               include("conexion_datos.php");
-			             Conexion_datos::aliados_funcion();
-	                	?>   
-                  </tr>
-                </tbody>
-              </table>
+          <table border="10" class="tabla table table-responsive-md table-bordered align-center font-weight-light">
+              <thead id="tablas" class="table-aliados-color-head"><!--inicio de cabecera que contiene columnas-->
+                <tr class="cabecera_table">
+                  <td scope="col" class="col-md-2 align-middle"># Convenio</td> <!--Columna-->
+                  <td scope="col" class="col-md-3 align-middle">Nombre de la empresa</td> <!--Columna-->
+                  <td scope="col" class="col-md-2 align-middle">Página Oficial</td> <!--Columna-->
+                  <td scope="col" class="col-md-2 align-middle">Detalles</td> <!--Columna-->
+                  <td scope="col" class="col-md-2 align-middle">Acciones</td> <!--Columna-->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <?PHP
+                  include("conexion_datos.php");
+                  Conexion_datos::aliados_funcion();
+                  ?>   
+                </tr>
+              </tbody>
+            </table>
       </section>
     </div><!--Fin de cuerpo-->
 
@@ -102,7 +102,7 @@
               <label>Correo de la empresa</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="email" class="form-control fuente_monse">
             </div>
           </div><!--Fin del row-->
           <br>
@@ -179,7 +179,7 @@
               <label>Correo de la empresa</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="email" class="form-control fuente_monse">
             </div>
           </div><!--Fin del row-->
           <br>
@@ -208,10 +208,10 @@
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         ¿Seguro que desea eliminar aliado?, esta acción no puede revertirse.
-        <button type="button" class="fuente-monse btn btn-info align-derecha">Borrar</button>
+        <button type="button" class="fuente-monse btn btn-danger align-derecha">Borrar</button>
       </div>
-    </div>
-  </div>
+    </div><!--Fin modal-dialog-->
+  </div><!-- Termina modal -->
      
 
 

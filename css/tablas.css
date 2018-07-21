@@ -1,0 +1,58 @@
+/*Propiedades de las tablas*/
+    /*TABLA DE ALIADOS*/
+        .table-aliados-color-head{
+            background-color: cadetblue;
+            color: black; 
+        }
+    /*TABLA DE PETICIONES*/
+        .table-peticiones-color-head{
+            background-color: crimson;
+            color: black;
+        }
+    /*TABLA DE CONVOCATORIA*/        
+        .table-fechas-color-head{
+            background-color: coral;
+        }
+    /*PROPIEDADES GENERALES*/
+        /*Centrar las columnas*/
+        .col-centrada{
+            float: none;
+            margin: 0 auto;
+        }
+        /*Fuente de la tabla*/
+        .tabla{
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            vertical-align: middle;
+            font-size: 93%;
+            font-weight: normal;
+            text-align: center;
+        }
+        /*Bordes de la tabla*/
+        .table-bordered td, .table-bordered th{
+            border-color: black !important;
+        }
+        /*Cabecera de las columnas*/
+        #tablas{
+            vertical-align: middle;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        /*Alto de la cabecera*/
+        .cabecera_table{
+            height: 1px;
+        }
+
+
+
+
+
+
+        /*
+        .table-bordere td, .table-bordere th{
+            border-color: black;
+            border-top-color: rgb(0, 0, 0);
+            border-right-color: rgb(0, 0, 0);
+            border-left-color: rgb(0, 0, 0);
+            border-bottom-color: rgb(0, 0, 0);
+        }*/
