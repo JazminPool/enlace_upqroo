@@ -94,7 +94,7 @@
               <label>Fecha de la convocatoria</label>
             </div>
             <div class="col">
-              <input id="" type="date" class="txt_center form-control fuente_monse">
+              <input id="" type="date" class="txt_center form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -114,7 +114,7 @@
               <label>Tipo de documento</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -151,7 +151,7 @@
               <label>Fecha de la convocatoria</label>
             </div>
             <div class="col">
-              <input id="" type="date" class="txt_center form-control fuente_monse">
+              <input id="" type="date" class="txt_center form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -171,7 +171,7 @@
               <label>Tipo de documento</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -185,20 +185,12 @@
   <div class="modal fade bd-example-modal-sm" id="delete_convocatoria" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
-        ¿Seguro que desea eliminar aliado?, esta acción no puede revertirse.
+        ¿Seguro que desea eliminar esta fecha?, esta acción no puede revertirse.
         <button type="button" class="fuente-monse btn btn-danger align-derecha">Borrar</button>
       </div>
     </div><!--Fin modal-dialog-->
   </div><!-- Termina modal -->
-
-
-    <!-- Bootstrap JavaScript -->
-    <script src="source/jquery/jquery.min.js"></script>
-    <script src="source/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript -->
-    <script src="source/jquery-easing/jquery.easing.min.js"></script>
-    <!-- JavaScript de bootrap -->
-    <script src="js/resume.min.js"></script>
+    
 
   </body>
 </html>

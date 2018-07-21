@@ -53,14 +53,5 @@
     </div><!--Fin de cuerpo-->
 
 
-
-    <!-- Bootstrap JavaScript -->
-    <script src="source/jquery/jquery.min.js"></script>
-    <script src="source/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript -->
-    <script src="source/jquery-easing/jquery.easing.min.js"></script>
-    <!-- JavaScript de bootrap -->
-    <script src="js/resume.min.js"></script>
-
   </body>
 </html>

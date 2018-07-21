@@ -12,9 +12,20 @@
 <link href="source/devicons/css/devicons.min.css" rel="stylesheet">
 <link href="source/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
+<!-- Bootstrap JavaScript -->
+<script src="source/jquery/jquery.min.js"></script>
+<script src="source/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript -->
+<script src="source/jquery-easing/jquery.easing.min.js"></script>
+<!-- JavaScript de bootrap -->
+<script src="js/resume.min.js"></script>
+<!--JavaScript de la hora-->
+<script src="js/hora.js"></script>
+
 <!-- Estilos(css) -->
 <link href="css/style.min.css" rel="stylesheet">
 <link href="css/style_enlace.css" rel="stylesheet">
 <link href="css/botones.css" rel="stylesheet">
 <link href="css/tablas.css" rel="stylesheet">
+<link href="css/empresas.css" rel="stylesheet"> <!--css de empresas-->
 

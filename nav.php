@@ -1,6 +1,6 @@
 <!--Nav-SideBar responsive-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <a class="navbar-brand js-scroll-trigger">
         <span class="d-block d-lg-none">Enlace</span>
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/lorena.png">
@@ -36,5 +36,5 @@
             <a class="nav-link link-font" href="#historial">Cerrar sesión</a>
           </li>
         </ul>
-      </div>
+      </div><!--Fin del collapse navbar-->
     </nav>  

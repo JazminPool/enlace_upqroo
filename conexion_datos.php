@@ -83,7 +83,7 @@ public static function Switch($id_aliado,$id_nombre,$contac_empresa,$correo_empr
       <div class='row justify-content-md-center'>   
         <div class='col-lg-8'>    
           <div class='modal-body'>
-            <div class='card vertical_centro' style='width: 18rem;'>
+            <div class='vertical_centro' style='width: 18rem;'>
               <img class='card-img-top' src='img/lorena.png' alt='Logotipo de empresa'> <!--Aquí debe ir el logo-->
               <div class='card-body fuente_monse fuente_especial'>
                 <p class='card-text'>
@@ -92,8 +92,8 @@ public static function Switch($id_aliado,$id_nombre,$contac_empresa,$correo_empr
                 <p class='card-text'>
                   Contacto: '".$correo_empresa."'
                 </p>
-              </div>
-            </div>
+              </div><!--Fin de card-body-->
+            </div><!--Finaliza el vertical_centro-->
           </div><!--Finaliza modal-loby-->
         </div><!--Finaliza col-md-6-->
       </div> <!--Finaliza row-->

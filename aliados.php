@@ -66,7 +66,7 @@
               <label>Numero de convenio</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -75,7 +75,7 @@
               <label>Nombre de la empresa</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -84,7 +84,7 @@
               <label>URL del Sitio Oficial</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -93,7 +93,7 @@
               <label>Telefono de la empresa</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -102,7 +102,7 @@
               <label>Correo de la empresa</label>
             </div>
             <div class="col">
-              <input type="email" class="form-control fuente_monse">
+              <input type="email" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -143,7 +143,7 @@
               <label>Numero de convenio</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -152,7 +152,7 @@
               <label>Nombre de la empresa</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -161,7 +161,7 @@
               <label>URL del Sitio Oficial</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -170,7 +170,7 @@
               <label>Telefono de la empresa</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse">
+              <input type="text" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -179,7 +179,7 @@
               <label>Correo de la empresa</label>
             </div>
             <div class="col">
-              <input type="email" class="form-control fuente_monse">
+              <input type="email" class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -201,9 +201,9 @@
         </div><!--Fin del modal-body-->
       </div>
     </div>
-  </div><!--Finaliza modal-->
+  </div><!--Finaliza modal de agregar aliado-->
   
-  <!--Inicia modal 'alert' de eliminar  -->
+  <!--Inicia modal 'alert' de eliminar aliado  -->
   <div class="modal fade bd-example-modal-sm" id="delete_aliado" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -211,17 +211,8 @@
         <button type="button" class="fuente-monse btn btn-danger align-derecha">Borrar</button>
       </div>
     </div><!--Fin modal-dialog-->
-  </div><!-- Termina modal -->
+  </div><!-- Termina modal de eliminar aliado-->
      
-
-
-    <!-- Bootstrap JavaScript -->
-    <script src="source/jquery/jquery.min.js"></script>
-    <script src="source/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript -->
-    <script src="source/jquery-easing/jquery.easing.min.js"></script>
-    <!-- JavaScript de bootrap -->
-    <script src="js/resume.min.js"></script>
 
   </body>
 </html>

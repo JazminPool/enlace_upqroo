@@ -8,6 +8,16 @@
     float: right;
 }
 
+/*Botones de EMPRESAS*/
+    /*Boton agregar nueva publicacion*/
+        .btn_add_public{
+            float: right;
+            background-color: grey;
+        }
+        .btn_add_public:hover{
+            background-color: dimgrey;
+        }
+
 /*Boton enviar de CORREOS MASIVOS*/
     .btn-enviar{
         background-color: yellowgreen;
