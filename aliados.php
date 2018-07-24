@@ -50,82 +50,7 @@
       </section>
     </div><!--Fin de cuerpo-->
 
-  <!--Inicia modal editar aliado-->
-  <div class="modal fade" id="edita_aliado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header modal-header-color-edit">
-          <h5 class="modal-title modal-title-edit" id="">Editar</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div><!--Fin header-->
-        <div class="modal-body">
-          <div class="row col-centrada">
-            <div class="col">
-              <label>Numero de convenio</label>
-            </div>
-            <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <div class="row col-centrada">
-            <div class="col">
-              <label>Nombre de la empresa</label>
-            </div>
-            <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <div class="row col-centrada">
-            <div class="col">
-              <label>URL del Sitio Oficial</label>
-            </div>
-            <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <div class="row col-centrada">
-            <div class="col">
-              <label>Telefono de la empresa</label>
-            </div>
-            <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <div class="row col-centrada">
-            <div class="col">
-              <label>Correo de la empresa</label>
-            </div>
-            <div class="col">
-              <input type="email" class="form-control fuente_monse" required>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <center>
-            <div class="row col-centrada">
-              <div class="col">
-                <label>Seleccionar logotipo</label>
-              </div>
-            </div><!--Fin del row-->
-            <div class="row col-centrada">  
-              <div class="col">
-                <div class="form-group">
-                  <input type="file" class="form-control-file" id="">
-                </div>
-              </div>
-            </div><!--Fin del row-->
-            <button type="button" class="fuente-monse btn btn-info align-derecha">Guardar</button>
-          </center>
-        </div><!--Fin del modal-body-->
-      </div>
-    </div>
-  </div><!--Finaliza modal de editar aliado-->
-
+<form method='POST' action='definir_accion.php'>
 
   <!--Inicia modal Agregar nuevo aliado-->
   <div class="modal fade" id="agrega_aliado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -143,7 +68,7 @@
               <label>Numero de convenio</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
+              <input type="text" name='numero_convenio' class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -152,7 +77,7 @@
               <label>Nombre de la empresa</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
+              <input type="text" name='nombre_empresa' class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -161,7 +86,7 @@
               <label>URL del Sitio Oficial</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
+              <input type="text" name='sitio_oficial' class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -170,7 +95,7 @@
               <label>Telefono de la empresa</label>
             </div>
             <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
+              <input type="text" name='telefono_empresa' class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -179,7 +104,7 @@
               <label>Correo de la empresa</label>
             </div>
             <div class="col">
-              <input type="email" class="form-control fuente_monse" required>
+              <input type="email" name='correo_empresa' class="form-control fuente_monse" required>
             </div>
           </div><!--Fin del row-->
           <br>
@@ -196,7 +121,7 @@
                 </div>
               </div>
             </div><!--Fin del row-->
-            <button type="button" class="fuente-monse btn btn-add-aliado">Guardar</button>
+            <button type="submit" name='guardar_datos' class="fuente-monse btn btn-add-aliado">Guardar</button>
           </center>
         </div><!--Fin del modal-body-->
       </div>
@@ -204,15 +129,8 @@
   </div><!--Finaliza modal de agregar aliado-->
   
   <!--Inicia modal 'alert' de eliminar aliado  -->
-  <div class="modal fade bd-example-modal-sm" id="delete_aliado" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        ¿Seguro que desea eliminar aliado?, esta acción no puede revertirse.
-        <button type="button" class="fuente-monse btn btn-danger align-derecha">Borrar</button>
-      </div>
-    </div><!--Fin modal-dialog-->
-  </div><!-- Termina modal de eliminar aliado-->
+ 
      
-
+</form>
   </body>
 </html>

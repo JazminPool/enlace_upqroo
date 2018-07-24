@@ -9,13 +9,13 @@ class Conexion_datos
   public static function aliados_funcion(){
     $cone=new conexion_bd();
     $cone->Conectar();
-
+    $editar='editar_aliado';
+    $eliminar='delete_aliado';
     $consulta_estados="SELECT * from aliados_estrategicos";
     $resultado_estados=$cone->ExecuteQuery($consulta_estados) or die ("Error en consulta de aliados estrategicos");     
   
     while($colum_aliado=$resultado_estados->fetch_array())
-    {
-      
+    {     
       echo"<tbody>
       <tr>
         <td scope='row' class='align-middle' name='num_convenio'>'".$colum_aliado['idaliados_estrategicos']."'</td> <!--Fila-->
@@ -32,27 +32,29 @@ class Conexion_datos
           </button> 
         </td> <!--Fila-->
         <td class='align-middle'>
-          <button type='button' data-toggle='modal' data-target='#edita_aliado'
+          <button type='button' data-toggle='modal' data-target='#".$editar.$colum_aliado['idaliados_estrategicos']."'
             class='btn btn-info bordes-boton btn-sm my-0 waves-effect waves-light'>
             Editar
           </button> 
-          <button type='button' ".$colum_aliado['idaliados_estrategicos']."' data-toggle='modal' data-target='#delete_aliado'
+          <button type='button' data-toggle='modal' data-target='#".$eliminar.$colum_aliado['idaliados_estrategicos']."'
           class='btn btn-danger bordes-boton btn-sm my-0 waves-effect waves-light'>
             Elminar
           </button> 
         </td> <!--Fila-->
       </tr>
     </tbody>";
-      self::llama_detalles($colum_aliado['idaliados_estrategicos']);
+      self::llama_detalles($colum_aliado['idaliados_estrategicos'],$editar,$eliminar);
     }   
 }
 
+
+
 //Funcion que recibe el id de aliado para que se haga la consulta especifica de los detalles de la empresa
-public static function llama_detalles($id_aliado)
+public static function llama_detalles($id_aliado,$editar,$eliminar)
 {  $cone=new conexion_bd();
   $cone->Conectar();
 
-  $consulta_estados="SELECT idaliados_estrategicos,nombre_empresa,contacto_empresa,correo_empresa from aliados_estrategicos WHERE idaliados_estrategicos='".$id_aliado."'";
+  $consulta_estados="SELECT * from aliados_estrategicos INNER JOIN archivos ON aliados_estrategicos.archivos_idarchivos=archivos.idarchivos WHERE idaliados_estrategicos='".$id_aliado."'";
   $resultado_estados=$cone->ExecuteQuery($consulta_estados) or die ("Error en consulta de aliados estrategicos"); 
   
   while($colum_id=$resultado_estados->fetch_array())
@@ -61,15 +63,19 @@ public static function llama_detalles($id_aliado)
     $nom_empresa=$colum_id['nombre_empresa'];
     $contac_empresa=$colum_id['contacto_empresa'];
     $correo_empresa=$colum_id['correo_empresa'];
+    $url=$colum_id['pagoficial_empresa'];
+    $foto=$colum_id['archivo_adjunto'];
+    self::Switch($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa,$foto); 
+    self::edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa,$editar,$url);
+    self::elimina_aliado($id_aliado,$eliminar);
       
   }
-  self::Switch($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa); 
-  
+
 }
 
 
 //Funcion para llamar el modal de ver detalles
-public static function Switch($id_aliado,$id_nombre,$contac_empresa,$correo_empresa)
+public static function Switch($id_aliado,$id_nombre,$contac_empresa,$correo_empresa,$foto)
 {  echo "
   <div class='modal fade' id='".$id_aliado."' tabindex='-1' role='dialog' aria-labelledby='modal_detalles_afiliadosLabel' aria-hidden='true'>
   <div class='modal-dialog' role='document'>
@@ -84,7 +90,7 @@ public static function Switch($id_aliado,$id_nombre,$contac_empresa,$correo_empr
         <div class='col-lg-8'>    
           <div class='modal-body'>
             <div class='vertical_centro' style='width: 18rem;'>
-              <img class='card-img-top' src='img/lorena.png' alt='Logotipo de empresa'> <!--Aquí debe ir el logo-->
+              <img class='card-img-top' src='archivos/logos/".$foto."' alt='Logotipo de empresa'> <!--Aquí debe ir el logo-->
               <div class='card-body fuente_monse fuente_especial'>
                 <p class='card-text'>
                   Telefono: '".$contac_empresa."'
@@ -104,8 +110,101 @@ public static function Switch($id_aliado,$id_nombre,$contac_empresa,$correo_empr
   </div>
 </div>";}
 
+//FUNCION PARA EDITAR A LOS ALIADOS
+public static function edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa,$editar,$url)
+{
+ echo "
+ <form method='POST' action='definir_accion.php'>
+  <div class='modal fade' id='".$editar.$id_aliado."' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog' role='document'>
+      <div class='modal-content'>
+        <div class='modal-header modal-header-color-edit'>
+          <h5 class='modal-title modal-title-edit'>Editar</h5>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span>
+          </button>
+        </div>
+        <div class='modal-body'>
+          <div class='row col-centrada'>
+            <div class='col'>
+              <label>Numero de convenio</label>
+            </div>
+            <div class='col'>
+              <input type='text' class='form-control fuente_monse' value='$id_aliado' disabled>
+            </div>
+          </div>
+          <br>
+          <div class='row col-centrada'>
+            <div class='col'>
+              <label>Nombre de la empresa</label>
+            </div>
+            <div class='col'>
+              <input type='text' class='form-control fuente_monse' name='nuevonom_empresa' value='$nom_empresa' required>
+            </div>
+          </div>
+          <br>
+          <div class='row col-centrada'>
+            <div class='col'>
+              <label>URL del Sitio Oficial</label>
+            </div>
+            <div class='col'>
+              <input type='text' class='form-control fuente_monse' name='nuevo_url' value='$url' required>
+            </div>
+          </div>
+          <br>
+          <div class='row col-centrada'>
+            <div class='col'>
+              <label>Telefono de la empresa</label>
+            </div>
+            <div class='col'>
+              <input type='text' class='form-control fuente_monse' name='nuevo_contac' value='$contac_empresa' required>
+            </div>
+          </div>
+          <br>
+          <div class='row col-centrada'>
+            <div class='col'>
+              <label>Correo de la empresa</label>
+            </div>
+            <div class='col'>
+              <input type='email' class='form-control fuente_monse' name='nuevo_email' value='$correo_empresa' required>
+            </div>
+          </div>
+          <br>
+          <center>
+            <div class='row col-centrada'>
+              <div class='col'>
+                <label>Seleccionar logotipo</label>
+              </div>
+            </div>
+            <div class='row col-centrada'>  
+              <div class='col'>
+                <div class='form-group'>
+                  <input type='file' name='foto'class='form-control-file'>
+                </div>
+              </div>
+            </div>
+            <button type='submit' class='fuente-monse btn btn-info align-derecha' name='editar_datos'>Guardar</button>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>";
 
 }
 
+public static function elimina_aliado($id_aliado,$eliminar)
+{
+  echo "
+  <div class='modal fade bd-example-modal-sm' id='".$eliminar.$id_aliado."' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-sm'>
+    <div class='modal-content'>
+      ¿Seguro que desea eliminar aliado ".$id_aliado." ?, esta acción no puede revertirse.
+      <button type='submit' name='eliminar_convenio' class='fuente-monse btn btn-danger align-derecha'>Borrar</button>
+    </div>
+  </div>
+</div>";
+}
+}
 
 ?>
