@@ -20,7 +20,7 @@
 <!-- JavaScript de bootrap -->
 <script src="js/resume.min.js"></script>
 <!--JavaScript de la hora-->
-<script src="js/hora.js"></script>
+<script src="js/funciones.js"></script>
 
 <!-- Estilos(css) -->
 <link href="css/style.min.css" rel="stylesheet">

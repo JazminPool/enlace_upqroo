@@ -29,7 +29,7 @@
           </div>
           <div class="form-group">
             <small>Mensaje</small>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <textarea class="form-control" id="" rows="8"></textarea>
           </div>
           <div class="form-group">
             <button type='button' class='btn btn-enviar waves-light'>

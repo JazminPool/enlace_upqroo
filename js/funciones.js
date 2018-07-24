@@ -21,3 +21,12 @@ function mueveReloj(){
     document.form_reloj.reloj.value = horaImprimible;
     setTimeout("mueveReloj()",1000) ;
 }
+
+
+
+
+
+    
+    
+
+    

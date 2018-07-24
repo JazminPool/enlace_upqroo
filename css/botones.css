@@ -13,9 +13,12 @@
         .btn_add_public{
             float: right;
             background-color: grey;
+            font-weight: 300;
+            color: black;
         }
         .btn_add_public:hover{
             background-color: dimgrey;
+            color: white;
         }
 
 /*Boton enviar de CORREOS MASIVOS*/

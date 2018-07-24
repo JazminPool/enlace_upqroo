@@ -2,13 +2,67 @@
     .body_index_empresas{
         background-color: beige;
     }
+
+/*Propiedades para agregar una nueva publicacion*/   
+    /*INPUTS DE LA IMAGEN*/
+        .txf_public_{ 
+            width: 650px !important;
+            /*padding: 12px 10px;*/
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid rgb(241, 241, 241);
+        }
+            .txf_public{
+            width: 780px !important;
+            /*padding: 12px 10px;*/
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid rgb(241, 241, 241);
+        }
+        .txa_public{
+            font-size: 12px;
+        }
+    /*FUENTE DE IMAGEN*/
+        .text_left{
+            text-align: left;
+            padding-left: 15px;
+        }
+        .txt_title_public{
+            text-transform: uppercase;
+        }
+    /*IMAGEN*/
+        .medidas_public{
+            height: 680px; /*Alto*/
+            width: 900px; /*Ancho*/
+        }
+        .backg_public{
+            background-color: rgb(255, 255, 255);
+        }
+        .cont_logoup{
+            padding-top: 8px;
+            padding-right: 15px;
+        }
+        .imgback_public{
+            float: right;
+            height: 120px;
+            width: 120px;
+        }
+
 /*Propiedades del inicio de empresas*/
     .body_inicio_empresas{
         background-color: whitesmoke;
     }
     .navbar_color{
-        background-color: darkseagreen;
+        background-color: #447876;
+        color: white;
     }
+
+    /*INPUTS */
+        .fontsize_plantilla{
+            font-size: 14px;
+        }
 
 /*Propiedades del login*/    
     .bordes_contenedor{
@@ -25,3 +79,5 @@
     .contenedor_card_login{
         background-color: white;
     }
+
+

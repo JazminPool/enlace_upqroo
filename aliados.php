@@ -32,7 +32,7 @@
               <thead id="tablas" class="table-aliados-color-head"><!--inicio de cabecera que contiene columnas-->
                 <tr class="cabecera_table">
                   <td scope="col" class="col-md-2 align-middle"># Convenio</td> <!--Columna-->
-                  <td scope="col" class="col-md-3 align-middle">Nombre de la empresa</td> <!--Columna-->
+                  <td scope="col" class="col-md-4 align-middle">Nombre de la empresa</td> <!--Columna-->
                   <td scope="col" class="col-md-2 align-middle">Página Oficial</td> <!--Columna-->
                   <td scope="col" class="col-md-2 align-middle">Detalles</td> <!--Columna-->
                   <td scope="col" class="col-md-2 align-middle">Acciones</td> <!--Columna-->
