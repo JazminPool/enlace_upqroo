@@ -50,7 +50,7 @@
       </section>
     </div><!--Fin de cuerpo-->
 
-<form method='POST' action='definir_accion.php'>
+<form method='POST' action='definir_accion.php' enctype="multipart/form-data">
 
   <!--Inicia modal Agregar nuevo aliado-->
   <div class="modal fade" id="agrega_aliado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -117,7 +117,7 @@
             <div class="row col-centrada">  
               <div class="col">
                 <div class="form-group">
-                  <input type="file" class="form-control-file" id="">
+                  <input type="file" class="form-control-file" name="foto" >
                 </div>
               </div>
             </div><!--Fin del row-->

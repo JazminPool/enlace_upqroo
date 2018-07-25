@@ -66,7 +66,7 @@ public static function llama_detalles($id_aliado,$editar,$eliminar)
     $url=$colum_id['pagoficial_empresa'];
     $foto=$colum_id['archivo_adjunto'];
     self::Switch($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa,$foto); 
-    self::edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa,$editar,$url);
+    self::edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa,$editar,$url,$foto);
     self::elimina_aliado($id_aliado,$eliminar);
       
   }
@@ -111,10 +111,10 @@ public static function Switch($id_aliado,$id_nombre,$contac_empresa,$correo_empr
 </div>";}
 
 //FUNCION PARA EDITAR A LOS ALIADOS
-public static function edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa,$editar,$url)
+public static function edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$correo_empresa,$editar,$url,$foto)
 {
  echo "
- <form method='POST' action='definir_accion.php'>
+ <form method='POST' action='definir_accion.php' enctype='multipart/form-data'>
   <div class='modal fade' id='".$editar.$id_aliado."' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
     <div class='modal-dialog' role='document'>
       <div class='modal-content'>
@@ -130,7 +130,7 @@ public static function edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$cor
               <label>Numero de convenio</label>
             </div>
             <div class='col'>
-              <input type='text' class='form-control fuente_monse' value='$id_aliado' disabled>
+              <input type='text' class='form-control fuente_monse' name='num_aliado' value='$id_aliado' readonly>
             </div>
           </div>
           <br>
@@ -179,7 +179,7 @@ public static function edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$cor
             <div class='row col-centrada'>  
               <div class='col'>
                 <div class='form-group'>
-                  <input type='file' name='foto'class='form-control-file'>
+                  <input type='file' name='foto' class='form-control-file'>
                 </div>
               </div>
             </div>
@@ -196,15 +196,100 @@ public static function edita_aliado($id_aliado,$nom_empresa,$contac_empresa,$cor
 public static function elimina_aliado($id_aliado,$eliminar)
 {
   echo "
+  <form method=POST action='definir_accion.php'>
   <div class='modal fade bd-example-modal-sm' id='".$eliminar.$id_aliado."' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel' aria-hidden='true'>
   <div class='modal-dialog modal-sm'>
     <div class='modal-content'>
+    <input type='hidden' name='id_alumnos' value='$id_aliado'>
       ¿Seguro que desea eliminar aliado ".$id_aliado." ?, esta acción no puede revertirse.
       <button type='submit' name='eliminar_convenio' class='fuente-monse btn btn-danger align-derecha'>Borrar</button>
     </div>
   </div>
-</div>";
+</div>
+</form>";
+
 }
+
+////////////////////////////////////////////////CONVOCATORIAS///////////////////////////////////////////////////////////////7
+
+public static function mostrar_convocatoria()
+{
+  $cone=new conexion_bd();
+  $cone->Conectar();
+  $editar_convocatoria='edita_convocatoria';
+  $eliminar_convocatoria='delete_convocatoria';
+  $consulta_fechas="SELECT * from fechas_est inner join tipos_est ON fechas_est.tipos_idtipos=tipos_est.idtipos_est inner join
+  carreras ON fechas_est.carreras_idcarreras=carreras.idcarreras";
+  $resultado_fechas=$cone->ExecuteQuery($consulta_fechas) or die ("Error en consulta de fechas");  
+
+  while($colum_fecha=$resultado_fechas->fetch_array())
+  {
+  echo"
+  <tbody>
+  <tr>
+    <td scope='row' class='align-middle'>
+      ".$colum_fecha['descripcion_est']."
+    </td> 
+    <td class='align-middle'>
+    ".$colum_fecha['fecha_conv']."
+    </td> 
+    <td class='align-middle'>
+    ".$colum_fecha['descripcion_carrera']."
+    </td> 
+    <td class='align-middle'>".$colum_fecha['nombre_doc']."</td> 
+    <td class='align-middle'>
+
+      <button type='button' data-toggle='modal' data-target='#".$eliminar_convocatoria.$colum_fecha['idfechas_est']."' class='btn btn-danger bordes-boton btn-sm my-0 waves-effect waves-light'>
+        Eliminar
+      </button>
+    </td> 
+    </td> 
+  </tr>
+</tbody>";
+    self::detalles_convocatoria($colum_fecha['idfechas_est'],$editar_convocatoria,$eliminar_convocatoria);
+  }
+}
+
+public static function detalles_convocatoria($id_aliado, $editar_convocatoria,$eliminar_convocatoria)
+{
+  $cone=new conexion_bd();
+  $cone->Conectar();
+
+  $detalles_convocatorio="SELECT *  from fechas_est inner join tipos_est ON fechas_est.tipos_idtipos=tipos_est.idtipos_est inner join
+  carreras ON fechas_est.carreras_idcarreras=carreras.idcarreras WHERE idfechas_est='".$id_aliado."'";
+  $res_convo=$cone->ExecuteQuery($detalles_convocatorio) or die ("Error al llamar detalles");
+
+  while($colum_detalles=$res_convo->fetch_array())
+  {
+    $id_fecha=$colum_detalles['idfechas_est'];
+    $id_carrera=$colum_detalles['idcarreras'];
+    $descripcion_carrera=$colum_detalles['descripcion_carrera'];
+    $descripcion_estadia=$colum_detalles['descripcion_est']; 
+    $id_tipo=$colum_detalles['idtipos_est'];
+   
+  }
+
+
+}
+
+public static function eliminar_convocatoria()
+{
+  echo "
+  <form method='POST' action='definir_accion'>
+  <div class='modal fade bd-example-modal-sm' id='delete_convocatoria' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-sm'>
+    <div class='modal-content'>
+      ¿Seguro que desea eliminar esta fecha?, esta acción no puede revertirse.
+      <button type='submit' name='eliminar_convocatoria' class='fuente-monse btn btn-danger align-derecha'>Borrar</button>
+    </div>
+  </div>
+</div>
+</form>
+";
+}
+
+
+
 }
 
 ?>
