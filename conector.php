@@ -8,7 +8,7 @@ class conexion_bd
     public $database;
     public $conn;
     public function __construct(){
-        $this->host="localhost";
+        $this->host="localhost"; //servidor
         $this->user="root";
         $this->password="";
         $this->database="enlace_upqroo";     
