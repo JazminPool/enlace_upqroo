@@ -39,29 +39,10 @@
                     <td scope="col" class="col-md-2 align-middle">Action</td> <!--Columna-->
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row" class="align-middle">
-                      Estancias
-                    </td> <!--Fila-->
-                    <td class="align-middle">
-                      12/12/12
-                    </td> <!--Fila-->
-                    <td class="align-middle">
-                      Ingeniería en Software
-                    </td> <!--Fila-->
-                    <td class="align-middle">Documento</td> <!--Fila-->
-                    <td class="align-middle">
-                      <button type='button' data-toggle='modal' data-target='#edita_convocatoria' class='btn btn-info bordes-boton btn-sm my-0 waves-effect waves-light'>
-                        Editar
-                      </button>
-                      <button type='button' data-toggle='modal' data-target='#delete_convocatoria' class='btn btn-danger bordes-boton btn-sm my-0 waves-effect waves-light'>
-                        Eliminar
-                      </button>
-                    </td> <!--Fila-->
-                    </td> <!--Fila-->
-                  </tr>
-                </tbody>
+                <?php
+                include("conexion_datos.php");
+                Conexion_datos::mostrar_convocatoria();
+                ?>
               </table> 
               <!-- FINALIZA TABLA -->
       </section>
@@ -124,72 +105,7 @@
     </div>
   </div><!--Finaliza modal de editar convocatoria-->
 
-  <!--Inicia modal editar convocatoria-->
-  <div class="modal fade" id="edita_convocatoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header modal-header-color-edit">
-          <h5 class="modal-title modal-title-edit" id="">Editar</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div><!--Fin header-->
-        <div class="modal-body">
-          <div class="row col-centrada">
-            <div class="col">
-              <label>Tipo de convocatoria</label>
-            </div>
-            <div class="col">
-              <select id="" class="form-control-sm form-control txt_center">
-                <option>Estancias</option>
-              </select>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <div class="row col-centrada">
-            <div class="col">
-              <label>Fecha de la convocatoria</label>
-            </div>
-            <div class="col">
-              <input id="" type="date" class="txt_center form-control fuente_monse" required>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <div class="row col-centrada">
-            <div class="col">
-              <label>Carrera</label>
-            </div>
-            <div class="col">
-              <select id="" class="form-control-sm form-control txt_center">
-                <option>Ing. Software</option>
-              </select>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <div class="row col-centrada">
-            <div class="col">
-              <label>Tipo de documento</label>
-            </div>
-            <div class="col">
-              <input type="text" class="form-control fuente_monse" required>
-            </div>
-          </div><!--Fin del row-->
-          <br>
-          <button type="button" class="fuente-monse btn btn-info align-derecha">Guardar</button>
-        </div><!--Fin del modal-body-->
-      </div>
-    </div>
-  </div><!--Finaliza modal de editar convocatoria-->
   
-  <!--Inicia modal 'alert' de eliminar convocatoria  -->
-  <div class="modal fade bd-example-modal-sm" id="delete_convocatoria" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        ¿Seguro que desea eliminar esta fecha?, esta acción no puede revertirse.
-        <button type="button" class="fuente-monse btn btn-danger align-derecha">Borrar</button>
-      </div>
-    </div><!--Fin modal-dialog-->
-  </div><!-- Termina modal -->
     
 
   </body>

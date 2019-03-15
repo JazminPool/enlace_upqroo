@@ -8,6 +8,10 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require './vendor/autoload.php';
 
+$email=$_POST['mail'];
+$name=$_POST['nombre'];
+$clientSub=$_POST['asunto'];
+$txt=$_POST['txtMsg'];
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
@@ -22,17 +26,26 @@ try {
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('gloriaac98@gmail.com', 'Gloria la mas chida');
-    $mail->addAddress('jgpoolpech@gmail.com', 'Jazmín Pool');     // Add a recipient
+    $mail->setFrom('gloriaac98@gmail.com', 'Contacto Creasur');
+    $mail->addAddress($email, $name);     // Add a recipient
    
 
     
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Necesidades basicas';
-    $mail->Body    = '<h1 style="color:blue" >mi numero favorito es el... <b>4!</b></h1>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->Subject = $clientSub;
+    $mail->Body    = '<h1 style="color:blue" >ALGUIEN DESEA CONTACTARTE</b></h1><br>
+    <table border="1"> 
+        <tr>
+            <th>NOMBRE</th> 
+            <th>ASUNTO</th>
+            <th>Descripcion</th>
+        </tr> 
+        <td>'.$name.'</td>
+        <td>'.$clientSub.'</td>
+        <td>'.$txt.'</td>
+    </table>';
 
     $mail->send();
     echo 'Message has been sent';
