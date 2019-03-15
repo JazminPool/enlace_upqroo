@@ -12,6 +12,7 @@
 
   </head>
 
+    <!-- Esto es un nuevo cambio -->
   <body id="page-top" class="body-index">
     <!--Nav-SideBar responsive-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="izquierda-index">
